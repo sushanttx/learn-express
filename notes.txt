@@ -1,0 +1,17 @@
+require('express')	Loads the Express library so you can use it
+const app = express();	Creates a new web server instance
+app.get(...), app.post(...)	Define routes that respond to requests
+
+A callback function is a function passed as an argument to another function, and it’s executed after some operation is completed.
+You are telling a function, “Hey, once you're done, call this other function I gave you.”
+Node.js is asynchronous and non-blocking — it doesn’t wait for tasks like file reading, DB querying, or HTTP requests to finish.
+Instead, it uses callbacks to:
+Start a task. Do other things in the meantime. Then come back and run the callback once the task finishes
+
+An arrow function is a shorter syntax for writing functions in JavaScript. It was introduced in ES6 (ECMAScript 2015).
+
+for a regualar function, 'this' is referred from the object that is calling it.
+
+for an arrow function, 'this' is referred from the outer scope.
+
+A JavaScript object literal is the simplest way to create an object directly, without using any class or constructor function

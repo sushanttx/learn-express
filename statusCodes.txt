@@ -1,0 +1,35 @@
+| **100** | Continue                | The server has received the request headers and the client should proceed to send the body |
+| **101** | Switching Protocols     | Server agrees to switch protocols (e.g., HTTP → WebSocket)                                 |
+| **102** | Processing (WebDAV)     | Server is processing but no response yet                                                   |
+| **103** | Early Hints             | Preload resources while final response is being prepared                                   |
+| **199** | Misc. Info (unofficial) | Used in some custom cases for debugging or experimental APIs                               |
+
+| **200** | OK              | Standard successful response (GET, PUT, PATCH)                                 |
+| **201** | Created         | Resource was successfully created (POST)                                       |
+| **202** | Accepted        | Request received but not yet processed                                         |
+| **204** | No Content      | Request succeeded but no content returned (often DELETE)                       |
+| **206** | Partial Content | Used when returning part of a resource (e.g., for range requests in downloads) |
+
+| Code    | Name               | When to Use                                               |
+| ------- | ------------------ | --------------------------------------------------------- |
+| **301** | Moved Permanently  | Resource has moved; update bookmarks (permanent redirect) |
+| **302** | Found              | Temporary redirect (most common for simple redirects)     |
+| **304** | Not Modified       | Cached version is still valid; no need to re-download     |
+| **307** | Temporary Redirect | POST/PUT/DELETE method should be preserved on redirect    |
+| **308** | Permanent Redirect | Like 301, but keeps method and body                       |
+
+| Code    | Name         | When to Use                                                      |
+| ------- | ------------ | ---------------------------------------------------------------- |
+| **400** | Bad Request  | Malformed data, missing fields, or invalid inputs                |
+| **401** | Unauthorized | No valid authentication token provided                           |
+| **403** | Forbidden    | Authenticated, but not allowed to access                         |
+| **404** | Not Found    | Resource doesn’t exist (wrong URL or ID)                         |
+| **409** | Conflict     | Duplicate record, versioning issue, or already existing resource |
+
+| Code    | Name                  | When to Use                                                        |
+| ------- | --------------------- | ------------------------------------------------------------------ |
+| **500** | Internal Server Error | Generic error — something broke on the backend                     |
+| **501** | Not Implemented       | Server doesn’t support the requested functionality                 |
+| **502** | Bad Gateway           | Server received an invalid response from upstream                  |
+| **503** | Service Unavailable   | Server is down or overloaded (maintenance mode)                    |
+| **504** | Gateway Timeout       | Upstream server didn’t respond in time (e.g., DB or API timed out) |
