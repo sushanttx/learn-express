@@ -1,0 +1,38 @@
+### e tag is for cache validation. if resource hast changed, client can use If-None-Match header to avoid redownloading 
+### Example:
+## GET /data.json
+### If-None-Match: W/"3-fwPz8v68RvP6gy2YJRsMmPZLwZs"
+### server return 304 not modified. W/ meansa  weak tag meaning, its semantically the same but not byte by byte identical
+
+### GET REQUEST
+GET http://localhost:3000
+
+
+
+### GET /dashboard request
+GET http://localhost:3000/dashboard
+
+
+### DATA ENDPOINT
+GET http://localhost:3000/api/data
+
+
+### GET DATA HTML
+GET http://localhost:3000/data
+
+
+### POST DATA
+POST http://localhost:3000/api/data
+Content-Type:application/json
+ 
+{
+    "name": "suhs3"
+}
+
+
+### DELETE DATA
+DELETE http://localhost:3000/api/data
+
+
+### test
+https://minakshi-kolhe.demoadmsoft.in/

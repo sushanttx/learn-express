@@ -15,3 +15,7 @@ for a regualar function, 'this' is referred from the object that is calling it.
 for an arrow function, 'this' is referred from the outer scope.
 
 A JavaScript object literal is the simplest way to create an object directly, without using any class or constructor function
+
+A website endpoint is used for sending back html and they typically come when a user enters a url browser
+
+API endpoints dont send back a website.
